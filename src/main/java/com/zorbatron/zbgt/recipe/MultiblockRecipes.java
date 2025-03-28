@@ -31,7 +31,6 @@ public class MultiblockRecipes {
 
     protected static void init() {
         gcyms();
-        quads();
         megas();
         misc();
     }
@@ -72,62 +71,6 @@ public class MultiblockRecipes {
                 'M', MetaTileEntities.ALLOY_SMELTER[IV].getStackForm(),
                 'P', new UnificationEntry(plateDouble, GCYMMaterials.HSLASteel),
                 'A', MetaItems.VOLTAGE_COIL_IV);
-    }
-
-    private static void quads() {
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .input(MetaTileEntities.ELECTRIC_BLAST_FURNACE, 4)
-                .input(plate, Invar, 4)
-                .input(circuit, getMarkerMaterialByTier(HV))
-                .fluidInputs(SolderingAlloy.getFluid(L * 4))
-                .circuitMeta(4)
-                .output(ZBGTMetaTileEntities.QUAD_EBF)
-                .duration(20 * 5).EUt(VA[HV])
-                .buildAndRegister();
-
-        ModHandler.addShapedRecipe("quad_ebf", ZBGTMetaTileEntities.QUAD_EBF.getStackForm(),
-                "PBP",
-                "BCB",
-                "PBP",
-                'P', new UnificationEntry(plateDouble, Invar),
-                'B', MetaTileEntities.ELECTRIC_BLAST_FURNACE.getStackForm(),
-                'C', new UnificationEntry(circuit, getMarkerMaterialByTier(HV)));
-
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .input(MetaTileEntities.VACUUM_FREEZER, 4)
-                .input(plate, Aluminium, 4)
-                .input(circuit, getMarkerMaterialByTier(HV))
-                .fluidInputs(SolderingAlloy.getFluid(L * 4))
-                .circuitMeta(4)
-                .output(ZBGTMetaTileEntities.QUEEZER)
-                .duration(20 * 5).EUt(VA[HV])
-                .buildAndRegister();
-
-        ModHandler.addShapedRecipe("queezer", ZBGTMetaTileEntities.QUEEZER.getStackForm(),
-                "PBP",
-                "BCB",
-                "PBP",
-                'P', new UnificationEntry(plateDouble, Aluminium),
-                'B', MetaTileEntities.VACUUM_FREEZER.getStackForm(),
-                'C', new UnificationEntry(circuit, getMarkerMaterialByTier(HV)));
-
-        ASSEMBLER_RECIPES.recipeBuilder()
-                .input(MetaTileEntities.CRACKER, 4)
-                .input(plate, StainlessSteel, 4)
-                .input(circuit, getMarkerMaterialByTier(HV))
-                .fluidInputs(SolderingAlloy.getFluid(L * 4))
-                .circuitMeta(4)
-                .output(ZBGTMetaTileEntities.QUACKER)
-                .duration(20 * 5).EUt(VA[HV])
-                .buildAndRegister();
-
-        ModHandler.addShapedRecipe("quacker", ZBGTMetaTileEntities.QUACKER.getStackForm(),
-                "PBP",
-                "BCB",
-                "PBP",
-                'P', new UnificationEntry(plateDouble, StainlessSteel),
-                'B', MetaTileEntities.CRACKER.getStackForm(),
-                'C', new UnificationEntry(circuit, getMarkerMaterialByTier(HV)));
     }
 
     private static void megas() {
