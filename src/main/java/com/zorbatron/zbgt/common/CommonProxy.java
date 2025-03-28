@@ -25,7 +25,6 @@ import com.zorbatron.zbgt.api.recipes.properties.CoALProperty;
 import com.zorbatron.zbgt.api.unification.material.ZBGTMaterials;
 import com.zorbatron.zbgt.api.util.ZBGTLog;
 import com.zorbatron.zbgt.api.util.ZBGTMods;
-import com.zorbatron.zbgt.api.worldgen.CustomOreVeins;
 import com.zorbatron.zbgt.common.block.ZBGTMetaBlocks;
 import com.zorbatron.zbgt.common.covers.ZBGTCovers;
 import com.zorbatron.zbgt.common.items.ZBGTMetaItems;
@@ -55,10 +54,6 @@ public class CommonProxy {
     }
 
     public void postInit() throws IOException {
-        if (ZBGTConfig.worldGenerationSettings.enableOreGeneration) {
-            CustomOreVeins.init();
-        }
-
         ZBGTAPI.pyrotheum = ZBGTMods.THERMAL_FOUNDATION.isModLoaded() ?
                 FluidRegistry.getFluidStack("pyrotheum", 1) :
                 ZBGTMaterials.Pyrotheum.getFluid(1);

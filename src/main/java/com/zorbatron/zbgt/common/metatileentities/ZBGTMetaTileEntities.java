@@ -47,7 +47,6 @@ public class ZBGTMetaTileEntities {
     public static MTECoAL CoAL;
     public static MTECircuitAssemblyLine CAL;
 
-
     public static MTEYOTTank YOTTANK;
 
     public static MTELargeRockBreaker LARGE_ROCK_BREAKER;
