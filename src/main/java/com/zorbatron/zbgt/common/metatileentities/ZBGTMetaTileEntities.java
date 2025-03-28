@@ -9,7 +9,6 @@ import com.zorbatron.zbgt.common.metatileentities.multi.MTEYOTTank;
 import com.zorbatron.zbgt.common.metatileentities.multi.electric.*;
 import com.zorbatron.zbgt.common.metatileentities.multi.electric.large.*;
 import com.zorbatron.zbgt.common.metatileentities.multi.electric.mega.*;
-import com.zorbatron.zbgt.common.metatileentities.multi.electric.quad.*;
 import com.zorbatron.zbgt.common.metatileentities.multi.multiblockpart.*;
 import com.zorbatron.zbgt.common.metatileentities.multi.primitive.MTEIndustrialPBF;
 import com.zorbatron.zbgt.common.metatileentities.storage.MTECreativeComputationProvider;
@@ -48,9 +47,6 @@ public class ZBGTMetaTileEntities {
     public static MTECoAL CoAL;
     public static MTECircuitAssemblyLine CAL;
 
-    public static MTEQueebf QUAD_EBF;
-    public static MTEQueezer QUEEZER;
-    public static MTEQuacker QUACKER;
 
     public static MTEYOTTank YOTTANK;
 
@@ -156,11 +152,6 @@ public class ZBGTMetaTileEntities {
         CoAL = registerMetaTileEntity(18056,
                 new MTECoAL(zbgtId("coal")));
 
-        QUAD_EBF = registerMetaTileEntity(18057,
-                new MTEQueebf(zbgtId("quad_ebf")));
-        QUEEZER = registerMetaTileEntity(18058,
-                new MTEQueezer(zbgtId("queezer")));
-
         YOTTANK = registerMetaTileEntity(18059,
                 new MTEYOTTank(zbgtId("yottank")));
 
@@ -178,9 +169,6 @@ public class ZBGTMetaTileEntities {
                 new MTELargeAirCollector(zbgtId("large_air_collector")));
         LARGE_ALLOY_SMELTER = registerMetaTileEntity(18068,
                 new MTELargeAlloySmelter(zbgtId("large_alloy_smelter")));
-
-        QUACKER = registerMetaTileEntity(18069,
-                new MTEQuacker(zbgtId("quacker")));
 
         CAL = registerMetaTileEntity(18070,
                 new MTECircuitAssemblyLine(zbgtId("cal")));
